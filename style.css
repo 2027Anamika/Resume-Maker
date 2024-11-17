@@ -1,0 +1,138 @@
+
+/* Universal styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom right, #1e3a42, #3b6064); /* Deep teal gradient */
+    color: #e9e7e3; /* Soft beige text for readability */
+    text-align: center;
+    line-height: 1.6;
+    padding: 20px;
+    overflow-x: hidden;
+    background-size: 400% 400%; /* For animated effect */
+    animation: gradientBackground 15s ease infinite; /* Smooth animated gradient */
+}
+
+/* Background texture */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://www.transparenttextures.com/patterns/asfalt-dark.png'); /* Subtle texture */
+    opacity: 0.3; /* Low opacity to avoid overwhelming */
+    pointer-events: none; /* Ensures it doesn't interfere with the content */
+}
+
+/* Main heading with elegant effects */
+.Intro {
+    font-size: 50px;
+    font-weight: 700;
+    color: #f4d03f; /* Golden yellow */
+    margin: 50px auto 20px;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    position: relative;
+    animation: fade-in 1.5s ease-in-out; /* Smooth fade-in effect */
+}
+
+/* Decorative underline for heading */
+.Intro::after {
+    content: "";
+    display: block;
+    width: 160px;
+    height: 5px;
+    background: #f4d03f; /* Matching golden accent */
+    margin: 10px auto;
+    border-radius: 50px;
+    animation: bounce 1.5s infinite ease-in-out; /* Underline bounce effect */
+}
+
+/* Subheading styling */
+.Intro1 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #d1ccc0; /* Soft beige */
+    margin: 20px auto;
+    max-width: 80%;
+    line-height: 1.8;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Paragraph styling with elegant background */
+.para {
+    font-size: 18px;
+    margin: 20px auto;
+    max-width: 80%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2); /* Semi-transparent black for contrast */
+    border-radius: 15px; /* Rounded corners */
+    color: #e9e7e3; /* Soft beige */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    text-align: justify;
+}
+
+/* Button styling */
+.clr-btn {
+    display: inline-block;
+    margin: 30px auto;
+    background: linear-gradient(to right, #f4d03f, #a6802b); /* Gold gradient */
+    color: #1e3a42; /* Deep teal text for contrast */
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px; /* Rounded button */
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+/* Button hover effect */
+.clr-btn:hover {
+    background: linear-gradient(to right, #a6802b, #f4d03f); /* Reverse gradient */
+    color: #ffffff; /* White text on hover */
+    transform: scale(1.1); /* Slight zoom on hover */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); /* Larger shadow */
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Keyframes for underline bounce */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Keyframes for animated gradient background */
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

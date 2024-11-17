@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #1e293b;
+            color: #e2e8f0;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        h2, h3 {
+            color: #38bdf8;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            background: #334155;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .content {
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #1e293b;
+            background-color: #38bdf8;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #0284c7;
+            color: #ffffff;
+        }
+
+        .highlight {
+            color: #34d399;
+        }
+
+        .skill-list {
+            margin-top: 10px;
+            padding-left: 20px;
+            list-style-type: square;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <center>
+            <h2>Resume Builder: open.AI</h2>
+            <h3>Version 0.3</h3>
+        </center>
+        <br>
+
+        <div class="content">
+            <script>
+                let name = prompt("Enter your name: ");
+                let address = prompt("Enter your address: ");
+                let phone = prompt("Enter your phone number: ");
+                let email = prompt("Enter your Email Id: ");
+                let university = prompt("Enter your University name: ");
+                let certifications = prompt("Enter your certifications: ");
+                let hobbies = prompt("Enter your hobbies: ");
+                let references = prompt("Enter references (optional): ");
+                let otherLanguages = prompt("Enter other languages you are skilled in: ");
+                let projects = prompt("Enter your projects: ");
+                let workExperience = prompt("Enter your work experience: ");
+
+                document.write(`<h3 class='highlight'>Hello, I'm ${name}!</h3>`);
+                document.write(`<p><strong>Address:</strong> ${address}</p>`);
+                document.write(`<p><strong>Phone Number:</strong> ${phone}</p>`);
+                document.write(`<p><strong>Email:</strong> ${email}</p>`);
+                document.write(`<p><strong>University:</strong> ${university}</p>`);
+
+                let programmingChoice = prompt("1) Python. 2) Java. 3) Python & Java. 4) None \nEnter choice to select your skills: ");
+
+                if (programmingChoice == 1) {
+                    document.write("<h3 class='highlight'>Skills in Python:</h3>");
+                    document.write(`
+                        <ul class="skill-list">
+                            <li>Proficient in Python programming with expertise in data analysis, web development, and automation.</li>
+                            <li>Experience with libraries and frameworks such as Django, Flask, Pandas, NumPy, and Matplotlib.</li>
+                            <li>Skilled in creating RESTful APIs, web scraping, and deploying scalable web applications.</li>
+                            <li>Solid understanding of machine learning algorithms and AI techniques using TensorFlow and scikit-learn.</li>
+                            <li>Expertise in handling databases like SQLite, PostgreSQL, and MongoDB.</li>
+                            <li>Experienced in debugging, code optimization, and performance improvements.</li>
+                        </ul>
+                    `);
+                } else if (programmingChoice == 2) {
+                    document.write("<h3 class='highlight'>Skills in Java:</h3>");
+                    document.write(`
+                        <ul class="skill-list">
+                            <li>Proficient in Java programming for web and enterprise application development.</li>
+                            <li>Hands-on experience with Spring Boot, Hibernate, and JPA frameworks for backend development.</li>
+                            <li>Knowledgeable in multi-threading, memory management, and concurrency.</li>
+                            <li>Skilled in integrating APIs, working with databases, and handling large-scale projects.</li>
+                            <li>Expert in object-oriented principles, data structures, and algorithms.</li>
+                            <li>Familiar with tools like IntelliJ IDEA, Eclipse, and Maven for development.</li>
+                        </ul>
+                    `);
+                } else if (programmingChoice == 3) {
+                    document.write("<h3 class='highlight'>Skills in Python & Java:</h3>");
+                    document.write(`
+                        <ul class="skill-list">
+                            <li>Proficient in both Python and Java programming languages for application development.</li>
+                            <li>Experienced in web frameworks like Django, Flask, and Spring Boot.</li>
+                            <li>Skilled in developing and deploying REST APIs and database-driven applications.</li>
+                            <li>Strong knowledge of object-oriented principles, data structures, and multithreading.</li>
+                            <li>Hands-on experience with database integration and cloud services like AWS and Azure.</li>
+                            <li>Proficient in debugging, testing, and version control systems like Git.</li>
+                        </ul>
+                    `);
+                } else {
+                    document.write("<p>No programming languages selected.</p>");
+                }
+
+                let additionalChoice = prompt("1) C. 2) C++. 3) C & C++. 4) None \nEnter choice to select your additional skills: ");
+
+                if (additionalChoice == 1) {
+                    document.write("<h3 class='highlight'>Skills in C:</h3>");
+                    document.write(`
+                        <ul class="skill-list">
+                            <li>Proficient in system-level programming with a focus on memory and performance optimization.</li>
+                            <li>Experienced in developing efficient algorithms and implementing data structures.</li>
+                            <li>Skilled in debugging and working on embedded systems programming.</li>
+                            <li>Hands-on experience with tools like GCC, GDB, and Valgrind.</li>
+                        </ul>
+                    `);
+                } else if (additionalChoice == 2) {
+                    document.write("<h3 class='highlight'>Skills in C++:</h3>");
+                    document.write(`
+                        <ul class="skill-list">
+                            <li>Proficient in object-oriented programming and design patterns.</li>
+                            <li>Skilled in implementing efficient algorithms and data structures for complex projects.</li>
+                            <li>Experience with STL (Standard Template Library) for fast and efficient coding.</li>
+                            <li>Familiarity with multithreading, concurrency, and advanced debugging techniques.</li>
+                        </ul>
+                    `);
+                } else if (additionalChoice == 3) {
+                    document.write("<h3 class='highlight'>Skills in C & C++:</h3>");
+                    document.write(`
+                        <ul class="skill-list">
+                            <li>Strong proficiency in both C and C++ programming for system-level and object-oriented design.</li>
+                            <li>Experienced in developing efficient algorithms and working with STL libraries.</li>
+                            <li>Skilled in debugging, optimizing, and handling memory management.</li>
+                            <li>Hands-on experience with tools like GCC, Visual Studio, and Clang for development.</li>
+                        </ul>
+                    `);
+                } else {
+                    document.write("<p>No additional programming languages selected.</p>");
+                }
+
+                document.write(`<h3 class='highlight'>Other Languages:</h3> <p>${otherLanguages}</p>`);
+                document.write(`<h3 class='highlight'>Projects:</h3> <p>${projects}</p>`);
+                document.write(`<h3 class='highlight'>Work Experience:</h3> <p>${workExperience}</p>`);
+                document.write(`<h3 class='highlight'>Certifications:</h3> <p>${certifications}</p>`);
+                document.write(`<h3 class='highlight'>Hobbies:</h3> <p>${hobbies}</p>`);
+                if (references) {
+                    document.write(`<h3 class='highlight'>References:</h3> <p>${references}</p>`);
+                }
+                document.write("<h3>Thank you for reviewing my resume! I am available upon request.</h3>");
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>
